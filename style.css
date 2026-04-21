@@ -35,6 +35,10 @@ h1 {
     font-weight: 500;
     cursor: pointer;
     transition: opacity 0.15s ease;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 .btn-primary {

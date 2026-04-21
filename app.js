@@ -20,15 +20,17 @@ function showError(text) {
 
 if (!listingId || !avitoUrl) {
     showError('Неверные параметры страницы. Вернись в бот и запусти круг заново.');
+} else {
+    openBtn.href = avitoUrl;
 }
 
 let openedAt = null;
 let timerInterval = null;
 
-openBtn.addEventListener('click', () => {
-    if (!avitoUrl) return;
+openBtn.addEventListener('click', (e) => {
+    if (!avitoUrl) { e.preventDefault(); return; }
     if (openedAt === null) openedAt = Date.now();
-    tg.openLink(avitoUrl);
+    try { tg.openLink(avitoUrl, { try_instant_view: false }); } catch (_) {}
     timerEl.classList.remove('hidden');
     startTimer();
 });
