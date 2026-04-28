@@ -27,6 +27,13 @@ h1 {
     line-height: 1.4;
 }
 
+.hint-tip {
+    background: rgba(36, 129, 204, 0.08);
+    border-left: 3px solid var(--tg-theme-button-color, #2481cc);
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
 .btn {
     padding: 14px 16px;
     border: none;
